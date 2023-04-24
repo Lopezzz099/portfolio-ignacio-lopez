@@ -1,0 +1,27 @@
+header {
+  display: flex;
+  justify-content: center;
+  padding: 10px 30px;
+  position: sticky;
+  top: 0px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+.menuDesktop {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+}
+.menuDesktop > p {
+  width: 150px;
+  color: #659AA6;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.menuDesktop > p:hover {
+  color: #025159;
+  transition: .2s;
+  transform: scale(1.1);
+}
