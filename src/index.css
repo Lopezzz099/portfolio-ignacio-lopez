@@ -15,3 +15,11 @@ code {
 section{
   padding: 130px 0;
 }
+:root{
+  --background-primary:#F2E9E4;
+  --background-secondary:#f7f3f0;
+  --color1: #013440;
+  --color2: #659AA6;
+  --color3: #B4D2D9;
+  --color4: #025159;
+}

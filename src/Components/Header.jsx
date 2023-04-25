@@ -6,9 +6,9 @@ const Header = () => {
     <header>
       <div>
         <ul className="menuDesktop">
+          <p>Inicio</p>
           <p>Sobre mi</p>
           <p>Proyectos</p>
-          <p>Tecnologias</p>
           <p>Contactos</p>
         </ul>
       </div>

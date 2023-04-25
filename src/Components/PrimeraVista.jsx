@@ -1,18 +1,22 @@
 import React from "react";
 import "./PrimeraVistaStyles.css";
-import "../blobz.min.css";
 
 const PrimeraVista = () => {
   return (
-    <section className="primeraVista">
-      <div>
-        <p></p>
-        <h1>Ignacio Lopez</h1>
-        <p></p>
+    <section className="primeraVista" id="inicio">
+      <div className="cajaIntro">
+        <h2 className="tituloPort">Portfolio</h2>
+        <h1 className="tituloNom">Ignacio Lopez</h1>
+        <p className="subtitulo">Desarrollador Front-End</p>
         <div></div>
       </div>
-      <div>
-        <img src="" alt="" />
+      <div className="cajaFoto">
+        <lord-icon
+          src="https://cdn.lordicon.com/qhgmphtg.json"
+          trigger="hover"
+          colors="primary:#013440,secondary:#B4D2D9"
+          style={{width:"250px",height:"250px"}}
+        ></lord-icon>
       </div>
     </section>
   );
