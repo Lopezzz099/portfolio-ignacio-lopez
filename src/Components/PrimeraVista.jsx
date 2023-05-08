@@ -7,7 +7,7 @@ const PrimeraVista = () => {
       <div className="cajaIntro">
         <h2 className="tituloPort">Portfolio</h2>
         <h1 className="tituloNom">Ignacio Lopez</h1>
-        <p className="subtitulo">Desarrollador Front-End</p>
+        <p className="subtitulo">Desarrollador Front-End especializado en React.js</p>
         <div></div>
       </div>
       <div className="cajaFoto">

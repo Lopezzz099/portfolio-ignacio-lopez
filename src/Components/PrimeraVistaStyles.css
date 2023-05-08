@@ -49,11 +49,22 @@
   opacity: 0;
 }
 .cajaFoto {
-  /* width: 50%;
-    margin: 0 auto;
-    min-width: 130px;
-    max-width: 160px;
-    object-fit: fill; */
+  animation-name: entrada-de-imagen;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: scale(0);
+}
+@keyframes entrada-de-imagen {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 @keyframes entrada-de-texto {
   from {

@@ -13,16 +13,17 @@ header {
   padding: 0px;
   margin: 0px;
 }
-.menuDesktop > p {
+.menuDesktop > a {
   width: 150px;
   color: #659AA6;
   cursor: pointer;
   text-align: center;
+  text-decoration: none;
   font-weight: 400;
   font-size: 1rem;
   text-transform: uppercase;
 }
-.menuDesktop > p:hover {
+.menuDesktop > a:hover {
   color: #025159;
   transition: .2s;
   transform: scale(1.1);
