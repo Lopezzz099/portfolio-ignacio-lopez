@@ -1,8 +1,9 @@
 import React from "react";
-import PrimeraVista from "../Components/PrimeraVista";
-import SobreMi from "../Components/SobreMi";
-import Proyectos from "../Components/Proyectos";
-import Contactos from "../Components/Contactos";
+import PrimeraVista from "../Components/Inicio/PrimeraVista";
+import SobreMi from "../Components/SobreMi/SobreMi";
+import Proyectos from "../Components/Proyectos/Proyectos";
+import Contactos from "../Components/Contactos/Contactos";
+
 
 const Home = () => {
   return (

@@ -15,24 +15,15 @@ code {
 section{
   padding: 130px 0;
 }
-:root{
-  --background-primary:#F2E9E4;
-  --background-secondary:#f7f3f0;
-  --color1: #013440;
-  --color2: #659AA6;
-  --color3: #B4D2D9;
-  --color4: #025159;
-}
 ::-webkit-scrollbar {
   width: 5px;
-  
 }
 
 /* Establecer el color de la barra de desplazamiento y del thumb */
 ::-webkit-scrollbar-track {
-  background-color: var(--color3);
+  background-color: #B4D2D9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color4);
+  background-color: #025159;
 }

@@ -1,0 +1,24 @@
+.github{
+    color: #F2E9E4;
+}
+.github:hover{
+    color: black;
+    transition: .2s;
+    transform: scale(1.2);
+}
+.gitlab{
+    color: #F2E9E4;
+}
+.gitlab:hover{
+    color: #E24329;
+    transition: .2s;
+    transform: scale(1.2);
+}
+.linkedin{
+    color: #F2E9E4;
+}
+.linkedin:hover{
+    color: #0961B8;
+    transition: .2s;
+    transform: scale(1.2);
+}
