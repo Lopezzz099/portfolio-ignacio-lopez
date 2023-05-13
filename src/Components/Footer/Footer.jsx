@@ -21,7 +21,7 @@ const Footer = () => {
     >
       <Box>
         <Typography sx={{ fontSize: "1.1rem", color: "primary.main" }}>
-          © 2023 Ignacio Lopez | Hecho con React
+          © 2023 Ignacio Lopez | Hecho con React y Material UI
         </Typography>
       </Box>
       <Box component="nav" sx={{ display: "flex", alignItems: "center" }}>

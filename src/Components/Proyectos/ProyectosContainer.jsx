@@ -1,0 +1,30 @@
+import React, { useEffect, useState } from "react";
+import Proyectos from "./Proyectos";
+
+const ProyectosContainer = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const proyectos = document.getElementById("proyectos");
+      const proyectosTop = proyectos.offsetTop;
+      const proyectosHeight = proyectos.clientHeight;
+      const windowTop = window.pageYOffset;
+      const windowHeight = window.innerHeight;
+      if (
+        proyectosTop < windowTop + windowHeight &&
+        proyectosTop + proyectosHeight > windowTop
+      ) {
+        setIsVisible(true);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return <Proyectos isVisible ={isVisible}/>;
+};
+
+export default ProyectosContainer;

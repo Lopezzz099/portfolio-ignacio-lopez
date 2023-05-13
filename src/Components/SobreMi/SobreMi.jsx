@@ -58,7 +58,7 @@ const SobreMi = () => {
             }}
           >
             Soy un desarrollador Front-End con conocimientos en HTML, CSS,
-            JavaScript y React, terminando el primer año de la carrera Certified
+            JavaScript y React, empezando el segundo año de la carrera Certified
             Tech Developer en Digital House. Durante mi carrera, he trabajado en
             varios proyectos en los que he adquirido experiencia en el
             desarrollo de interfaces de usuario, el diseño y la adaptación de
