@@ -1,7 +1,8 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
+import ProyectosCardsContainer from "../ProyectosCards/ProyectosCardsContainer";
 
-const Proyectos = ({isVisible}) => {
+const Proyectos = ({ isVisible, proyectos, count }) => {
   return (
     <Box
       component="section"
@@ -13,6 +14,7 @@ const Proyectos = ({isVisible}) => {
         margin: "0 auto",
         display: "flex",
         justifyContent: "space-between",
+        flexDirection: "column",
       }}
     >
       <Typography
@@ -23,16 +25,28 @@ const Proyectos = ({isVisible}) => {
           marginTop: "0px",
           textTransform: "uppercase",
           textAlign: "start",
-          animationName: isVisible ? 'entrada-de-texto-Sobre-Mi' : "",
+          animationName: isVisible ? "entrada-de-texto-Sobre-Mi" : "",
           animationDuration: "1s",
-          animationDelay: ".5s",
+          animationDelay: ".3s",
           animationFillMode: "forwards",
           opacity: "0",
+          marginBottom: "40px",
         }}
       >
         Proyectos
       </Typography>
-      <Box></Box>
+      <Grid container spacing={2} sx={{ justifyContent: "space-between" }}>
+        {proyectos.map((proyecto, index) => (
+          <>
+            {console.log(index)}
+            <ProyectosCardsContainer
+              proyecto={proyecto}
+              key={index}
+              delay={count = count + 0.5} // Cada componente aparece 0.5s después del anterior
+            />
+          </>
+        ))}
+      </Grid>
     </Box>
   );
 };
