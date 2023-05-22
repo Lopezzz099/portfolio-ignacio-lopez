@@ -35,19 +35,19 @@ const HeaderContainer = () => {
       }}>
         <ListItem>
           {" "}
-          <LinkNav href="#inicio" sx={{textAlign: "start"}}>Inicio</LinkNav>
+          <LinkNav href="/home#inicio" sx={{textAlign: "start"}}>Inicio</LinkNav>
         </ListItem>
         <ListItem>
           {" "}
-          <LinkNav href="#sobreMi" sx={{textAlign: "start"}}>Sobre mi</LinkNav>
+          <LinkNav href="/home#sobreMi" sx={{textAlign: "start"}}>Sobre mi</LinkNav>
         </ListItem>
         <ListItem>
           {" "}
-          <LinkNav href="#proyectos" sx={{textAlign: "start"}}>Proyectos</LinkNav>
+          <LinkNav href="/home#proyectos" sx={{textAlign: "start"}}>Proyectos</LinkNav>
         </ListItem>
         <ListItem>
           {" "}
-          <LinkNav href="#contactos" sx={{textAlign: "start"}}>Contactos</LinkNav>
+          <LinkNav href="/home#contactos" sx={{textAlign: "start"}}>Contactos</LinkNav>
         </ListItem>
       </List>
     </Box>

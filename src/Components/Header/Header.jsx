@@ -54,20 +54,20 @@ const Header = ({state, toggleDrawer, list}) => {
           </SwipeableDrawer>
         </React.Fragment>
 
-        <LinkNav href="#inicio" sx={{ display: { xs: "none", sm: "inline" } }}>
+        <LinkNav href="/home#inicio" sx={{ display: { xs: "none", sm: "inline" } }}>
           Inicio
         </LinkNav>
-        <LinkNav href="#sobreMi" sx={{ display: { xs: "none", sm: "inline" } }}>
+        <LinkNav href="/home#sobreMi" sx={{ display: { xs: "none", sm: "inline" } }}>
           Sobre mi
         </LinkNav>
         <LinkNav
-          href="#proyectos"
+          href="/home#proyectos"
           sx={{ display: { xs: "none", sm: "inline" } }}
         >
           Proyectos
         </LinkNav>
         <LinkNav
-          href="#contactos"
+          href="/home#contactos"
           sx={{ display: { xs: "none", sm: "inline" } }}
         >
           Contactos
