@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Routes/Home";
 import { ThemeProvider } from "@emotion/react";
 import { theme } from "./themeConfig";
+import ProyectsDetail from "./Routes/ProyectsDetail";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -16,6 +17,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index path="/home" element={<Home />} />
+          <Route index path="/proyects/:id" element={<ProyectsDetail />} />
         </Route>
       </Routes>
     </ThemeProvider>

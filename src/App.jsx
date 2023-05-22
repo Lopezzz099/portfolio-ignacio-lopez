@@ -1,8 +1,8 @@
 import './App.css';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
+import HeaderContainer from './Components/Header/HeaderContainer';
 
 function App() {
   const location = useLocation();
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header/>
+      <HeaderContainer/>
         <main>
           <Outlet/>
         </main>

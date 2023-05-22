@@ -14,6 +14,8 @@ const PrimeraVista = () => {
         margin: "0 auto",
         display: "flex",
         justifyContent: "space-between",
+        flexDirection: {xs:"column", sm: "row"},
+        alignItems: "center",
       }}
     >
       <Box
@@ -22,6 +24,7 @@ const PrimeraVista = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
+          alignItems: {xs:"center", sm: "start"},
         }}
       >
         <Typography
@@ -29,7 +32,7 @@ const PrimeraVista = () => {
           sx={{
             fontWeight: "400",
             textTransform: "uppercase",
-            fontSize: "1.2rem",
+            fontSize: {sm:"1rem",md: "1.2rem", xs: ".8rem" },
             letterSpacing: "10px",
             margin: "0px",
             textAlign: "start",
@@ -45,7 +48,7 @@ const PrimeraVista = () => {
         <Typography variant="h1" sx={{
             fontWeight: "700",
             textTransform: "uppercase",
-            fontSize: "5rem",
+            fontSize: {lg:"4.5rem", md:"3.5rem", sm: "2.5rem", xs: "2.2rem"},
             margin: "0px",
             textAlign: "start",
             animationName: "entrada-de-texto",
@@ -59,7 +62,7 @@ const PrimeraVista = () => {
         <Typography sx={{
             fontStyle: "italic",
             fontWeight: "400",
-            fontSize: "1.2rem",
+            fontSize: {sm:"1rem",md: "1.2rem", xs: ".8rem" },
             margin: "0px",
             textAlign: "start",
             animationName: "entrada-de-texto",

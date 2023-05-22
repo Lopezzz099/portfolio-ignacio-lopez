@@ -1,15 +1,20 @@
 import React from "react";
 import "./HeaderStyles.css";
-import { Box } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  IconButton,
+  SwipeableDrawer,
+  Toolbar,
+} from "@mui/material";
 import { LinkNav } from "../../Custom/CustomComponents";
+import MenuIcon from "@mui/icons-material/Menu";
 
-const Header = () => {
+const Header = ({state, toggleDrawer, list}) => {
   return (
-    <Box
-      component="header"
+    <AppBar
+      position="static"
       sx={{
-        display: "flex",
-        justifyContent: "center",
         padding: "10px 30px",
         position: "sticky",
         top: "0px",
@@ -18,18 +23,57 @@ const Header = () => {
         zIndex: "10",
       }}
     >
-      <Box component="nav">
-        <Box
-          component="ul"
-          sx={{ display: "flex", padding: "0px", margin: "0px" }}
+      <Toolbar
+        sx={{
+          display: "flex",
+          justifyContent: { sm: "center", xs: "start" },
+          padding: "0px",
+        }}
+      >
+        <React.Fragment key={"left"}>
+          <IconButton
+            size="large"
+            edge="start"
+            aria-label="menu"
+            onClick={toggleDrawer("left", true)}
+            sx={{
+              mr: 2,
+              display: { xs: "flex", sm: "none" },
+              color: "primary.third",
+            }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <SwipeableDrawer
+            anchor={"left"}
+            open={state["left"]}
+            onClose={toggleDrawer("left", false)}
+            onOpen={toggleDrawer("left", true)}
+          >
+            {list("left")}
+          </SwipeableDrawer>
+        </React.Fragment>
+
+        <LinkNav href="#inicio" sx={{ display: { xs: "none", sm: "inline" } }}>
+          Inicio
+        </LinkNav>
+        <LinkNav href="#sobreMi" sx={{ display: { xs: "none", sm: "inline" } }}>
+          Sobre mi
+        </LinkNav>
+        <LinkNav
+          href="#proyectos"
+          sx={{ display: { xs: "none", sm: "inline" } }}
         >
-          <LinkNav href="#inicio">Inicio</LinkNav>
-          <LinkNav href="#sobreMi">Sobre mi</LinkNav>
-          <LinkNav href="#proyectos">Proyectos</LinkNav>
-          <LinkNav href="#contactos">Contactos</LinkNav>
-        </Box>
-      </Box>
-    </Box>
+          Proyectos
+        </LinkNav>
+        <LinkNav
+          href="#contactos"
+          sx={{ display: { xs: "none", sm: "inline" } }}
+        >
+          Contactos
+        </LinkNav>
+      </Toolbar>
+    </AppBar>
   );
 };
 

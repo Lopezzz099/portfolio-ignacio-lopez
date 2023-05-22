@@ -37,14 +37,11 @@ const Proyectos = ({ isVisible, proyectos, count }) => {
       </Typography>
       <Grid container spacing={2} sx={{ justifyContent: "space-between" }}>
         {proyectos.map((proyecto, index) => (
-          <>
-            {console.log(index)}
             <ProyectosCardsContainer
               proyecto={proyecto}
               key={index}
               delay={count = count + 0.5} // Cada componente aparece 0.5s después del anterior
             />
-          </>
         ))}
       </Grid>
     </Box>

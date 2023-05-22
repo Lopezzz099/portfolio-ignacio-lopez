@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import ProyectosCards from "./ProyectosCards";
+import { useNavigate } from "react-router-dom";
 
-const ProyectosCardsContainer = ({ delay, proyecto, key }) => {
+const ProyectosCardsContainer = ({ delay, proyecto }) => {
   const [showButton, setShowButton] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  console.log(key)
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,6 +34,7 @@ const ProyectosCardsContainer = ({ delay, proyecto, key }) => {
       proyecto={proyecto}
       isVisible={isVisible}
       delay={delay}
+      navigate={navigate}
     />
   );
 };

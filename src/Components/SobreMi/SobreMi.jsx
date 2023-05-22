@@ -20,13 +20,14 @@ const SobreMi = () => {
           maxWidth: "1100px",
           width: "90%",
           margin: "0 auto",
+          flexDirection: {xs:"column", md: "row"},
         }}
       >
-        <Box sx={{ width: "40%" }}>
+        <Box sx={{ width: {md: "40%", xs: "100%"} }}>
           <Typography
             variant="h2"
             sx={{
-              fontSize: "2.5rem",
+              fontSize: {md: "2.5rem", sm: "2rem", xs: "1.5rem"},
               fontWeight: "700",
               marginTop: "0px",
               textTransform: "uppercase",
@@ -36,12 +37,13 @@ const SobreMi = () => {
               animationDelay: ".5s",
               animationFillMode: "forwards",
               opacity: "0",
+              marginBottom: {xs: "20px", md: "0px"}
             }}
           >
             Sobre mi
           </Typography>
         </Box>
-        <Box sx={{ width: "60%" }}>
+        <Box sx={{ width: {md: "60%", xs: "100%"} }}>
           <Typography
             sx={{
               lineHeight: "22px",

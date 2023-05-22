@@ -1,6 +1,6 @@
 import { Box, Button, Grid } from "@mui/material";
 
-const ProyectosCards = ({ showButton, setShowButton, proyecto, isVisible, delay }) => {
+const ProyectosCards = ({ showButton, setShowButton, proyecto, isVisible, delay, navigate }) => {
   return (
     <Grid
       item
@@ -26,7 +26,9 @@ const ProyectosCards = ({ showButton, setShowButton, proyecto, isVisible, delay 
           height: "120px",
           filter: showButton && "brightness(40%)",
           transition: showButton && "filter 0.3s ease-in-out",
+          cursor: "pointer",
         }}
+        onClick={()=> navigate(`/proyects/${proyecto.id}`)}
       ></Box>
       <Button
         sx={{
@@ -39,6 +41,7 @@ const ProyectosCards = ({ showButton, setShowButton, proyecto, isVisible, delay 
             backgroundColor: "transparent",
           },
         }}
+        onClick={()=> navigate(`/proyects/${proyecto.id}`)}
       >
         Ver Detalles
       </Button>

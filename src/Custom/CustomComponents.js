@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 
 export const LinkNav = styled(Link)(({ theme }) => ({
   width: "150px",
-  color: "#659AA6",
+  color: theme.palette.primary.third,
   cursor: "pointer",
   textAlign: "center",
   textDecoration: "none",
