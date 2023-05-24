@@ -14,7 +14,7 @@ const PrimeraVista = () => {
         margin: "0 auto",
         display: "flex",
         justifyContent: "space-between",
-        flexDirection: {xs:"column", sm: "row"},
+        flexDirection: { xs: "column", sm: "row" },
         alignItems: "center",
       }}
     >
@@ -24,7 +24,7 @@ const PrimeraVista = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          alignItems: {xs:"center", sm: "start"},
+          alignItems: { xs: "center", sm: "start" },
         }}
       >
         <Typography
@@ -32,7 +32,7 @@ const PrimeraVista = () => {
           sx={{
             fontWeight: "400",
             textTransform: "uppercase",
-            fontSize: {sm:"1rem",md: "1.2rem", xs: ".8rem" },
+            fontSize: { sm: "1rem", md: "1.2rem", xs: ".8rem" },
             letterSpacing: "10px",
             margin: "0px",
             textAlign: "start",
@@ -45,10 +45,17 @@ const PrimeraVista = () => {
         >
           Portfolio
         </Typography>
-        <Typography variant="h1" sx={{
+        <Typography
+          variant="h1"
+          sx={{
             fontWeight: "700",
             textTransform: "uppercase",
-            fontSize: {lg:"4.5rem", md:"3.5rem", sm: "2.5rem", xs: "2.2rem"},
+            fontSize: {
+              lg: "4.5rem",
+              md: "3.5rem",
+              sm: "2.5rem",
+              xs: "2.2rem",
+            },
             margin: "0px",
             textAlign: "start",
             animationName: "entrada-de-texto",
@@ -56,13 +63,15 @@ const PrimeraVista = () => {
             animationDelay: ".8s",
             animationFillMode: "forwards",
             opacity: "0",
-        }}>
+          }}
+        >
           Ignacio Lopez
         </Typography>
-        <Typography sx={{
+        <Typography
+          sx={{
             fontStyle: "italic",
             fontWeight: "400",
-            fontSize: {sm:"1rem",md: "1.2rem", xs: ".8rem" },
+            fontSize: { sm: "1rem", md: "1.2rem", xs: ".8rem" },
             margin: "0px",
             textAlign: "start",
             animationName: "entrada-de-texto",
@@ -70,25 +79,51 @@ const PrimeraVista = () => {
             animationDelay: "1s",
             animationFillMode: "forwards",
             opacity: "0",
-        }}>
+          }}
+        >
           Desarrollador Front-End especializado en React.js
         </Typography>
       </Box>
-      <Box sx={{
-          animationName: "entrada-de-imagen",
-          animationDuration: "1s",
-          animationDelay: "0.5s",
-          animationFillMode: "forwards",
-          opacity: "0",
-          transform: "scale(0)",
-      }}>
-        <lord-icon
-          src="https://cdn.lordicon.com/qhgmphtg.json"
-          trigger="hover"
-          colors="primary:#013440,secondary:#B4D2D9"
-          style={{ width: "250px", height: "250px" }}
-        ></lord-icon>
-      </Box>
+      {
+        <Box
+          sx={{
+            animationName: "entrada-de-imagen",
+            animationDuration: "1s",
+            animationDelay: "0.5s",
+            animationFillMode: "forwards",
+            opacity: "0",
+            transform: "scale(0)",
+            display: {xs: "none", sm: "inline"}
+          }}
+        >
+          <lord-icon
+            src="https://cdn.lordicon.com/qhgmphtg.json"
+            trigger="hover"
+            colors="primary:#013440,secondary:#B4D2D9"
+            style={{ width: "250px", height: "250px" }}
+          ></lord-icon>
+        </Box>
+      }
+      {
+        <Box
+          sx={{
+            animationName: "entrada-de-imagen",
+            animationDuration: "1s",
+            animationDelay: "0.5s",
+            animationFillMode: "forwards",
+            opacity: "0",
+            transform: "scale(0)",
+            display: {xs: "inline", sm: "none"}
+          }}
+        >
+          <lord-icon
+            src="https://cdn.lordicon.com/qhgmphtg.json"
+            trigger="click"
+            colors="primary:#013440,secondary:#B4D2D9"
+            style={{ width: "250px", height: "250px" }}
+          ></lord-icon>
+        </Box>
+      }
     </Box>
   );
 };

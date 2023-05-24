@@ -55,7 +55,7 @@ const Skills = ({ isVisible, habilidades }) => {
         <Swiper
           slidesPerView={4}
           breakpoints={{
-            340: {
+            140: {
               slidesPerView: 1,
             },
             // when window width is >= 640px
@@ -103,24 +103,6 @@ const Skills = ({ isVisible, habilidades }) => {
               </Box>
             </SwiperSlide>
           ))}
-          {/* <SwiperSlide>
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                backgroundImage: `url(${Formikimg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "100px",
-                backgroundPosition: "center",
-                "&:hover": {
-                  transition: ".2s",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              <Typography>Formik</Typography>
-            </Box>
-          </SwiperSlide> */}
         </Swiper>
       </Box>
     </Box>
