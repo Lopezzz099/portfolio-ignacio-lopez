@@ -10,7 +10,7 @@ import {
 import { LinkNav } from "../../Custom/CustomComponents";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const Header = ({state, toggleDrawer, list}) => {
+const Header = ({ state, toggleDrawer, list, activeSection }) => {
   return (
     <AppBar
       position="static"
@@ -54,21 +54,58 @@ const Header = ({state, toggleDrawer, list}) => {
           </SwipeableDrawer>
         </React.Fragment>
 
-        <LinkNav href="/home#inicio" sx={{ display: { xs: "none", sm: "inline" } }}>
+        <LinkNav
+          href="/home#inicio"
+          sx={{
+            display: { xs: "none", sm: "inline" },
+            color: activeSection === "inicio" && "secondary.third",
+            transition: activeSection === "inicio" && ".2s",
+            transform: activeSection === "inicio" && "scale(1.1)",
+          }}
+        >
           Inicio
         </LinkNav>
-        <LinkNav href="/home#sobreMi" sx={{ display: { xs: "none", sm: "inline" } }}>
+        <LinkNav
+          href="/home#sobreMi"
+          sx={{
+            display: { xs: "none", sm: "inline" },
+            color: activeSection === "sobreMi" && "secondary.third",
+            transition: activeSection === "sobreMi" && ".2s",
+            transform: activeSection === "sobreMi" && "scale(1.1)",
+          }}
+        >
           Sobre mi
         </LinkNav>
         <LinkNav
           href="/home#proyectos"
-          sx={{ display: { xs: "none", sm: "inline" } }}
+          sx={{
+            display: { xs: "none", sm: "inline" },
+            color: activeSection === "proyectos" && "secondary.third",
+            transition: activeSection === "proyectos" && ".2s",
+            transform: activeSection === "proyectos" && "scale(1.1)",
+          }}
         >
           Proyectos
         </LinkNav>
         <LinkNav
+          href="/home#skills"
+          sx={{
+            display: { xs: "none", sm: "inline" },
+            color: activeSection === "skills" && "secondary.third",
+            transition: activeSection === "skills" && ".2s",
+            transform: activeSection === "skills" && "scale(1.1)",
+          }}
+        >
+          Habilidades
+        </LinkNav>
+        <LinkNav
           href="/home#contactos"
-          sx={{ display: { xs: "none", sm: "inline" } }}
+          sx={{
+            display: { xs: "none", sm: "inline" },
+            color: activeSection === "contactos" && "secondary.third",
+            transition: activeSection === "contactos" && ".2s",
+            transform: activeSection === "contactos" && "scale(1.1)",
+          }}
         >
           Contactos
         </LinkNav>

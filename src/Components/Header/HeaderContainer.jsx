@@ -1,9 +1,34 @@
 import { Box, List, ListItem } from "@mui/material";
 import Header from "./Header";
 import { LinkNav } from "../../Custom/CustomComponents";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const HeaderContainer = () => {
+  const [activeSection, setActiveSection] = useState('');
+
+  // Lógica para actualizar la sección activa en función del scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section');
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        const sectionTop = section.offsetTop;
+        if (scrollPosition >= sectionTop) {
+          setActiveSection(section.id);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const [state, setState] = useState({
     left: false,
   });
@@ -31,7 +56,7 @@ const HeaderContainer = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List sx={{
-        
+        padding: "18px"
       }}>
         <ListItem>
           {" "}
@@ -52,7 +77,7 @@ const HeaderContainer = () => {
       </List>
     </Box>
   );
-  return <Header state={state} toggleDrawer={toggleDrawer} list={list} />;
+  return <Header state={state} toggleDrawer={toggleDrawer} list={list} activeSection={activeSection}/>;
 };
 
 export default HeaderContainer;

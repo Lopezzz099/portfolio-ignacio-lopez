@@ -3,6 +3,7 @@ import PrimeraVista from "../Components/Inicio/PrimeraVista";
 import SobreMi from "../Components/SobreMi/SobreMi";
 import Contactos from "../Components/Contactos/Contactos";
 import ProyectosContainer from "../Components/Proyectos/ProyectosContainer";
+import SkillsContainer from "../Components/Skills/SkillsContainer";
 
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
       <PrimeraVista />
       <SobreMi/>
       <ProyectosContainer/>
+      <SkillsContainer/>
       <Contactos/>
     </>
   );

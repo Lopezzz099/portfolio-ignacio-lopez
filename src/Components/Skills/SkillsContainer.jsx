@@ -1,19 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Proyectos from "./Proyectos";
-import Ecomerce from "../../img/ProyectoEcomerce.PNG";
+import Skills from "./Skills";
 
-const ProyectosContainer = () => {
+const SkillsContainer = () => {
   const [isVisible, setIsVisible] = useState(false);
-  let count = 0;
-  const proyectos = [
-    {
-      "id": 1,
-      "name": "E-commerce",
-      "image": `${Ecomerce}`,
-      "description": "Tienda de auriculares y sonido",
-    }
-  ]
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,10 +24,7 @@ const ProyectosContainer = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-
-
-  return <Proyectos isVisible={isVisible} proyectos={proyectos} count={count}/>;
+  return <Skills isVisible={isVisible}/>;
 };
 
-export default ProyectosContainer;
+export default SkillsContainer;
