@@ -2,33 +2,18 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import materialUIimg from "../../img/imgMaterialUI.png";
-import HTMLimg from "../../img/imgHTML5.png";
-import CSSimg from "../../img/imgCSS.png";
-import ResponsiveDesignimg from "../../img/imgResponsiveDesign.png";
-// import UXIUimg from "../../img/imgUX-UI.png";
-import UXIUimg from "../../img/ux-ui-logo.svg";
-import Reactimg from "../../img/imgReact.png";
-import Reduximg from "../../img/imgRedux.png";
-import ReactRouterimg from "../../img/imgReactRouter.png";
-import Jestimg from "../../img/imgJest.png";
-import NPMimg from "../../img/imgNPM.png";
-import JSDocimg from "../../img/imgJSDoc.png";
-import ReactPropTypesimg from "../../img/imgReactPropTypes.png";
-import ReactQueryimg from "../../img/imgReactQuery.png";
-import Formikimg from "../../img/imgFormik.png";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import "./Skills.css";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 
-const Skills = ({ isVisible }) => {
+const Skills = ({ isVisible, habilidades }) => {
   return (
     <Box
       component="section"
@@ -98,242 +83,27 @@ const Skills = ({ isVisible }) => {
           loop={true}
           navigation={true}
         >
-          <SwiperSlide>
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                backgroundImage: `url(${materialUIimg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "100px",
-                backgroundPosition: "center",
-                backgroundColor: "transparent",
-                "&:hover": {
-                  transition: ".2s",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              <Typography>Material UI</Typography>
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                backgroundImage: `url(${HTMLimg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "100px",
-                backgroundPosition: "center",
-                "&:hover": {
-                  transition: ".2s",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              <Typography>HTML5</Typography>
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                backgroundImage: `url(${CSSimg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "100px",
-                backgroundPosition: "center",
-                "&:hover": {
-                  transition: ".2s",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              <Typography>CSS3</Typography>
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                backgroundImage: `url(${ResponsiveDesignimg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "100px",
-                backgroundPosition: "center",
-                "&:hover": {
-                  transition: ".2s",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              <Typography>Responsive Design</Typography>
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                backgroundImage: `url(${UXIUimg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "100px",
-                backgroundPosition: "center",
-                "&:hover": {
-                  transition: ".2s",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              <Typography>UX/IU</Typography>
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                backgroundImage: `url(${Reactimg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "100px",
-                backgroundPosition: "center",
-                "&:hover": {
-                  transition: ".2s",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              <Typography>React.js</Typography>
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                backgroundImage: `url(${Reduximg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "100px",
-                backgroundPosition: "center",
-                "&:hover": {
-                  transition: ".2s",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              <Typography>Redux</Typography>
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                backgroundImage: `url(${ReactRouterimg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "100px",
-                backgroundPosition: "center",
-                "&:hover": {
-                  transition: ".2s",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              <Typography>React Router</Typography>
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                backgroundImage: `url(${Jestimg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "100px",
-                backgroundPosition: "center",
-                "&:hover": {
-                  transition: ".2s",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              <Typography>Jest</Typography>
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                backgroundImage: `url(${NPMimg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "100px",
-                backgroundPosition: "center",
-                "&:hover": {
-                  transition: ".2s",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              <Typography>NPM</Typography>
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                backgroundImage: `url(${JSDocimg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "100px",
-                backgroundPosition: "center",
-                "&:hover": {
-                  transition: ".2s",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              <Typography>JSDoc</Typography>
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                backgroundImage: `url(${ReactQueryimg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "100px",
-                backgroundPosition: "center",
-                "&:hover": {
-                  transition: ".2s",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              <Typography>React Query</Typography>
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                backgroundImage: `url(${ReactPropTypesimg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "100px",
-                backgroundPosition: "center",
-                "&:hover": {
-                  transition: ".2s",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              <Typography>React PropType</Typography>
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
+          {habilidades.map((skill) => (
+            <SwiperSlide key={skill.id}>
+              <Box
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  backgroundImage: `url(${skill.image})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "100px",
+                  backgroundPosition: "center",
+                  "&:hover": {
+                    transition: ".2s",
+                    transform: "scale(1.1)",
+                  },
+                }}
+              >
+                <Typography>{skill.text}</Typography>
+              </Box>
+            </SwiperSlide>
+          ))}
+          {/* <SwiperSlide>
             <Box
               sx={{
                 width: "100%",
@@ -350,7 +120,7 @@ const Skills = ({ isVisible }) => {
             >
               <Typography>Formik</Typography>
             </Box>
-          </SwiperSlide>
+          </SwiperSlide> */}
         </Swiper>
       </Box>
     </Box>

@@ -1,4 +1,4 @@
-import { Box, List, ListItem } from "@mui/material";
+import { Box, Divider, List, ListItem } from "@mui/material";
 import Header from "./Header";
 import { LinkNav } from "../../Custom/CustomComponents";
 import { useEffect, useState } from "react";
@@ -56,20 +56,28 @@ const HeaderContainer = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List sx={{
-        padding: "18px"
+        padding: "70px 18px 18px 18px"
       }}>
         <ListItem>
           {" "}
           <LinkNav href="/home#inicio" sx={{textAlign: "start"}}>Inicio</LinkNav>
         </ListItem>
+        <Divider />
         <ListItem>
           {" "}
           <LinkNav href="/home#sobreMi" sx={{textAlign: "start"}}>Sobre mi</LinkNav>
         </ListItem>
+        <Divider />
         <ListItem>
           {" "}
           <LinkNav href="/home#proyectos" sx={{textAlign: "start"}}>Proyectos</LinkNav>
         </ListItem>
+        <Divider />
+        <ListItem>
+          {" "}
+          <LinkNav href="/home#skills" sx={{textAlign: "start"}}>Habilidades</LinkNav>
+        </ListItem>
+        <Divider />
         <ListItem>
           {" "}
           <LinkNav href="/home#contactos" sx={{textAlign: "start"}}>Contactos</LinkNav>

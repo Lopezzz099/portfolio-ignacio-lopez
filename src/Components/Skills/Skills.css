@@ -1,3 +1,7 @@
+:root{
+  --swiper-theme-color: #363636; 
+}
+
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -15,6 +19,7 @@
   display: block;
   width: 100%;
 }
+
 /* @media (max-width:1000px) {
     .swiper{
         width: 100%;
