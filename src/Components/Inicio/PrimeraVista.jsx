@@ -2,11 +2,12 @@ import React from "react";
 import "./PrimeraVistaStyles.css";
 import { Box, Typography } from "@mui/material";
 
-const PrimeraVista = () => {
+const PrimeraVista = ({ isVisible, innerRef }) => {
   return (
     <Box
       component="section"
       id="inicio"
+      ref={innerRef}
       sx={{
         position: "relative",
         maxWidth: "1100px",
@@ -36,7 +37,7 @@ const PrimeraVista = () => {
             letterSpacing: "10px",
             margin: "0px",
             textAlign: "start",
-            animationName: "entrada-de-texto",
+            animationName: isVisible && "entrada-de-texto",
             animationDuration: "1s",
             animationDelay: "0.5s",
             animationFillMode: "forwards",
@@ -58,7 +59,7 @@ const PrimeraVista = () => {
             },
             margin: "0px",
             textAlign: "start",
-            animationName: "entrada-de-texto",
+            animationName: isVisible && "entrada-de-texto",
             animationDuration: "1s",
             animationDelay: ".8s",
             animationFillMode: "forwards",
@@ -74,7 +75,7 @@ const PrimeraVista = () => {
             fontSize: { sm: "1rem", md: "1.2rem", xs: ".8rem" },
             margin: "0px",
             textAlign: "start",
-            animationName: "entrada-de-texto",
+            animationName: isVisible && "entrada-de-texto",
             animationDuration: "1s",
             animationDelay: "1s",
             animationFillMode: "forwards",
@@ -87,7 +88,7 @@ const PrimeraVista = () => {
       {
         <Box
           sx={{
-            animationName: "entrada-de-imagen",
+            animationName: isVisible && "entrada-de-imagen",
             animationDuration: "1s",
             animationDelay: "0.5s",
             animationFillMode: "forwards",
@@ -107,7 +108,7 @@ const PrimeraVista = () => {
       {
         <Box
           sx={{
-            animationName: "entrada-de-imagen",
+            animationName: isVisible && "entrada-de-imagen",
             animationDuration: "1s",
             animationDelay: "0.5s",
             animationFillMode: "forwards",

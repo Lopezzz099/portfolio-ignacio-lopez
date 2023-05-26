@@ -13,11 +13,12 @@ import "./Skills.css";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 
-const Skills = ({ isVisible, habilidades }) => {
+const Skills = ({ isVisible, habilidades, innerRef }) => {
   return (
     <Box
       component="section"
       id="skills"
+      ref={innerRef}
       sx={{
         backgroundColor: "secondary.main",
         position: "relative",
@@ -41,7 +42,7 @@ const Skills = ({ isVisible, habilidades }) => {
             fontWeight: "700",
             marginTop: "0px",
             textTransform: "uppercase",
-            textAlign: "start",
+            textAlign: {xs:"center", sm: "start"},
             animationName: isVisible ? "entrada-de-texto-Sobre-Mi" : "",
             animationDuration: "1s",
             animationDelay: ".3s",
@@ -80,6 +81,13 @@ const Skills = ({ isVisible, habilidades }) => {
           }}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
+          style={{
+            animationName: isVisible ? "entrada-de-proyectos" : "",
+            animationDuration: "1s",
+            animationDelay: ".7s",
+            animationFillMode: "forwards",
+            opacity: "0",
+          }}
           loop={true}
           navigation={true}
         >
@@ -99,7 +107,7 @@ const Skills = ({ isVisible, habilidades }) => {
                   },
                 }}
               >
-                <Typography>{skill.text}</Typography>
+                <Typography sx={{ fontWeight: "700" }}>{skill.text}</Typography>
               </Box>
             </SwiperSlide>
           ))}

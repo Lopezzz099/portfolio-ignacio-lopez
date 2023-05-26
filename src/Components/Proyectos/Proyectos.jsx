@@ -2,11 +2,12 @@ import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import ProyectosCardsContainer from "../ProyectosCards/ProyectosCardsContainer";
 
-const Proyectos = ({ isVisible, proyectos, count }) => {
+const Proyectos = ({ isVisible, proyectos, count, innerRef }) => {
   return (
     <Box
       component="section"
       id="proyectos"
+      ref={innerRef}
       sx={{
         position: "relative",
         maxWidth: "1100px",
@@ -24,7 +25,7 @@ const Proyectos = ({ isVisible, proyectos, count }) => {
           fontWeight: "700",
           marginTop: "0px",
           textTransform: "uppercase",
-          textAlign: "start",
+          textAlign: {xs:"center", sm: "start"},
           animationName: isVisible ? "entrada-de-texto-Sobre-Mi" : "",
           animationDuration: "1s",
           animationDelay: ".3s",

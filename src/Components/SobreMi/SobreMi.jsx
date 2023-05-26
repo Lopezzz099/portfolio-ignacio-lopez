@@ -2,11 +2,12 @@ import React from "react";
 import "./SobreMiStyles.css";
 import { Box, Typography } from "@mui/material";
 
-const SobreMi = () => {
+const SobreMi = ({ isVisible, innerRef }) => {
   return (
     <Box
       component="section"
       id="sobreMi"
+      ref={innerRef}
       sx={{
         backgroundColor: "secondary.main",
         position: "relative",
@@ -31,8 +32,8 @@ const SobreMi = () => {
               fontWeight: "700",
               marginTop: "0px",
               textTransform: "uppercase",
-              textAlign: "start",
-              animationName: "entrada-de-texto-Sobre-Mi",
+              textAlign: {xs:"center", sm: "start"},
+              animationName: isVisible && "entrada-de-texto-Sobre-Mi",
               animationDuration: "1s",
               animationDelay: ".5s",
               animationFillMode: "forwards",
@@ -52,7 +53,7 @@ const SobreMi = () => {
               marginBottom: "15px",
               textAlign: "justify",
               color: "secondary.fourth",
-              animationName: "entrada-de-texto-Sobre-Mi",
+              animationName: isVisible && "entrada-de-texto-Sobre-Mi",
               animationDuration: "1s",
               animationDelay: ".8s",
               animationFillMode: "forwards",
@@ -76,7 +77,7 @@ const SobreMi = () => {
               marginBottom: "15px",
               textAlign: "justify",
               color: "secondary.fourth",
-              animationName: "entrada-de-texto-Sobre-Mi",
+              animationName: isVisible && "entrada-de-texto-Sobre-Mi",
               animationDuration: "1s",
               animationDelay: ".8s",
               animationFillMode: "forwards",

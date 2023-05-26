@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { createRef, useEffect, useState } from "react";
 import ProyectosCards from "./ProyectosCards";
 import { useNavigate } from "react-router-dom";
 
@@ -7,24 +7,34 @@ const ProyectosCardsContainer = ({ delay, proyecto }) => {
   const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
 
+
+  const contactosRef = createRef();
+
   useEffect(() => {
-    const handleScroll = () => {
-      const proyectos = document.getElementById("proyectos");
-      const proyectosTop = proyectos.offsetTop;
-      const proyectosHeight = proyectos.clientHeight;
-      const windowTop = window.pageYOffset;
-      const windowHeight = window.innerHeight;
-      if (
-        proyectosTop < windowTop + windowHeight &&
-        proyectosTop + proyectosHeight > windowTop
-      ) {
-        setIsVisible(true);
-      }
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
     };
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
+
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    if (contactosRef.current) {
+      observer.observe(contactosRef.current);
+    }
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (contactosRef.current) {
+        observer.unobserve(contactosRef.current);
+      }
     };
   }, []);
   return (
@@ -35,6 +45,7 @@ const ProyectosCardsContainer = ({ delay, proyecto }) => {
       isVisible={isVisible}
       delay={delay}
       navigate={navigate}
+      innerRef={contactosRef}
     />
   );
 };

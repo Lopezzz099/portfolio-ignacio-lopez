@@ -1,19 +1,8 @@
 import React, { createRef, useEffect, useState } from "react";
-import Proyectos from "./Proyectos";
-import Ecomerce from "../../img/ProyectoEcomerce.PNG";
+import PrimeraVista from "./PrimeraVista";
 
-const ProyectosContainer = () => {
+const PrimeraVistaContainer = () => {
   const [isVisible, setIsVisible] = useState(false);
-  let count = 0;
-  const proyectos = [
-    {
-      "id": 1,
-      "name": "E-commerce",
-      "image": `${Ecomerce}`,
-      "description": "Tienda de auriculares y sonido",
-    }
-  ]
-
 
   const contactosRef = createRef();
 
@@ -44,10 +33,8 @@ const ProyectosContainer = () => {
       }
     };
   }, []);
-
-
-
-  return <Proyectos isVisible={isVisible} innerRef={contactosRef} proyectos={proyectos} count={count}/>;
+  
+  return <PrimeraVista isVisible={isVisible} innerRef={contactosRef}/>;
 };
 
-export default ProyectosContainer;
+export default PrimeraVistaContainer;

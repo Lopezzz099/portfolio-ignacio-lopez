@@ -1,19 +1,8 @@
-import React, { createRef, useEffect, useState } from "react";
-import Proyectos from "./Proyectos";
-import Ecomerce from "../../img/ProyectoEcomerce.PNG";
+import React, { createRef, useEffect, useState } from 'react'
+import SobreMi from './SobreMi'
 
-const ProyectosContainer = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  let count = 0;
-  const proyectos = [
-    {
-      "id": 1,
-      "name": "E-commerce",
-      "image": `${Ecomerce}`,
-      "description": "Tienda de auriculares y sonido",
-    }
-  ]
-
+const SobreMiContainer = () => {
+      const [isVisible, setIsVisible] = useState(false);
 
   const contactosRef = createRef();
 
@@ -45,9 +34,9 @@ const ProyectosContainer = () => {
     };
   }, []);
 
+  return (
+    <SobreMi isVisible={isVisible} innerRef={contactosRef}/>
+  )
+}
 
-
-  return <Proyectos isVisible={isVisible} innerRef={contactosRef} proyectos={proyectos} count={count}/>;
-};
-
-export default ProyectosContainer;
+export default SobreMiContainer

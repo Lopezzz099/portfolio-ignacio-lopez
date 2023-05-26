@@ -1,19 +1,19 @@
 import React from "react";
-import PrimeraVista from "../Components/Inicio/PrimeraVista";
-import SobreMi from "../Components/SobreMi/SobreMi";
-import Contactos from "../Components/Contactos/Contactos";
 import ProyectosContainer from "../Components/Proyectos/ProyectosContainer";
 import SkillsContainer from "../Components/Skills/SkillsContainer";
+import ContactosContainer from "../Components/Contactos/ContactosContainer";
+import PrimeraVistaContainer from "../Components/Inicio/PrimeraVistaContainer";
+import SobreMiContainer from "../Components/SobreMi/SobreMiContainer";
 
 
 const Home = () => {
   return (
     <>
-      <PrimeraVista />
-      <SobreMi/>
+      <PrimeraVistaContainer />
+      <SobreMiContainer/>
       <ProyectosContainer/>
       <SkillsContainer/>
-      <Contactos/>
+      <ContactosContainer/>
     </>
   );
 };

@@ -13,11 +13,24 @@
   background-size: cover;
   width: 200px;
   height: 200px;
+  animation: floatAnimation 2s ease-in-out infinite;
 }
 
 .swiper-slide img {
   display: block;
   width: 100%;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* @media (max-width:1000px) {

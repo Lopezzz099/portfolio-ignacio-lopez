@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { createRef, useEffect, useState } from "react";
 import Skills from "./Skills";
 import materialUIimg from "../../img/imgMaterialUI.png";
 import HTMLimg from "../../img/imgHTML5.png";
@@ -90,27 +90,36 @@ const SkillsContainer = () => {
     }
   ]
 
+  const contactosRef = createRef();
+
   useEffect(() => {
-    const handleScroll = () => {
-      const proyectos = document.getElementById("proyectos");
-      const proyectosTop = proyectos.offsetTop;
-      const proyectosHeight = proyectos.clientHeight;
-      const windowTop = window.pageYOffset;
-      const windowHeight = window.innerHeight;
-      if (
-        proyectosTop < windowTop + windowHeight &&
-        proyectosTop + proyectosHeight > windowTop
-      ) {
-        setIsVisible(true);
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    if (contactosRef.current) {
+      observer.observe(contactosRef.current);
+    }
+
+    return () => {
+      if (contactosRef.current) {
+        observer.unobserve(contactosRef.current);
       }
     };
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
   }, []);
-  return <Skills isVisible={isVisible} habilidades={habilidades}/>;
+  return <Skills isVisible={isVisible} habilidades={habilidades} innerRef={contactosRef}/>;
 };
 
 export default SkillsContainer;

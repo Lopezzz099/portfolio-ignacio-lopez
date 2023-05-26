@@ -1,6 +1,6 @@
 import { Box, Button, Grid } from "@mui/material";
 
-const ProyectosCards = ({ showButton, setShowButton, proyecto, isVisible, delay, navigate }) => {
+const ProyectosCards = ({ showButton, setShowButton, proyecto, isVisible, delay, navigate, innerRef }) => {
   return (
     <Grid
       item
@@ -13,6 +13,7 @@ const ProyectosCards = ({ showButton, setShowButton, proyecto, isVisible, delay,
         animationFillMode: "forwards",
         opacity: "0",
       }}
+      ref={innerRef}
       onMouseEnter={() => setShowButton(true)}
       onMouseLeave={() => setShowButton(false)}
     >
