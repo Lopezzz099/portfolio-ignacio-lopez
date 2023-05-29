@@ -1,8 +1,8 @@
-import React, { createRef, useEffect, useState } from 'react'
-import SobreMi from './SobreMi'
+import React, { createRef, useEffect, useState } from "react";
+import SobreMi from "./SobreMi";
 
 const SobreMiContainer = () => {
-      const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const contactosRef = createRef();
 
@@ -34,9 +34,7 @@ const SobreMiContainer = () => {
     };
   }, []);
 
-  return (
-    <SobreMi isVisible={isVisible} innerRef={contactosRef}/>
-  )
-}
+  return <SobreMi isVisible={isVisible} innerRef={contactosRef} />;
+};
 
-export default SobreMiContainer
+export default SobreMiContainer;

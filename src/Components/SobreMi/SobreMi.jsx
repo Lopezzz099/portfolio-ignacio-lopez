@@ -38,7 +38,7 @@ const SobreMi = ({ isVisible, innerRef }) => {
               animationDelay: ".5s",
               animationFillMode: "forwards",
               opacity: "0",
-              marginBottom: {xs: "20px", md: "0px"}
+              marginBottom: {xs: "40px", md: "0px"}
             }}
           >
             Sobre mi

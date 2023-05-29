@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 
 import React from "react";
 import "./ContactosStyles.css";
@@ -44,7 +44,7 @@ const Contactos = ({ isVisible, innerRef }) => {
             marginBottom: "40px",
           }}
         >
-          Contactos
+          contáctame
         </Typography>
       </Box>
       <Box
@@ -88,11 +88,16 @@ const Contactos = ({ isVisible, innerRef }) => {
           }}
           component="form"
         >
-          <Grid item xs={6} sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             <Box
               sx={{
                 width: "80%",
@@ -102,11 +107,15 @@ const Contactos = ({ isVisible, innerRef }) => {
                 src={`${Img}`}
                 alt={Img}
                 loading="lazy"
-                style={{ width: "100%", borderRadius: "100%" }}
+                style={{
+                  width: "100%",
+                  borderRadius: "100%",
+                  // animation: "floatAnimation 2s ease-in-out infinite",
+                }}
               />
             </Box>
           </Grid>
-          <Grid item container xs={6}>
+          <Grid item container xs={12} md={6}>
             <Grid item xs={12}>
               <Typography
                 sx={{
@@ -119,6 +128,7 @@ const Contactos = ({ isVisible, innerRef }) => {
                   letterSpacing: "-0.214286px",
                   textAlign: "start",
                   marginTop: "10px",
+                  color: "secondary.third",
                 }}
               >
                 Email
@@ -142,6 +152,7 @@ const Contactos = ({ isVisible, innerRef }) => {
                   letterSpacing: "-0.214286px",
                   textAlign: "start",
                   marginTop: "10px",
+                  color: "secondary.third",
                 }}
               >
                 Asunto
@@ -165,6 +176,7 @@ const Contactos = ({ isVisible, innerRef }) => {
                   letterSpacing: "-0.214286px",
                   textAlign: "start",
                   marginTop: "10px",
+                  color: "secondary.third",
                 }}
               >
                 Mensaje

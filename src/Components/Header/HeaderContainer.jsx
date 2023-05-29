@@ -80,7 +80,7 @@ const HeaderContainer = () => {
         <Divider />
         <ListItem>
           {" "}
-          <LinkNav href="/home#contactos" sx={{textAlign: "start"}}>Contactos</LinkNav>
+          <LinkNav href="/home#contactos" sx={{textAlign: "start"}}>contáctame</LinkNav>
         </ListItem>
       </List>
     </Box>

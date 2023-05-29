@@ -107,7 +107,7 @@ const Header = ({ state, toggleDrawer, list, activeSection }) => {
             transform: activeSection === "contactos" && "scale(1.1)",
           }}
         >
-          Contactos
+          contáctame
         </LinkNav>
       </Toolbar>
     </AppBar>
