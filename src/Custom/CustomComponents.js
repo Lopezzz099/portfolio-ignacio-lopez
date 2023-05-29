@@ -1,4 +1,4 @@
-import {  Link, TextField } from "@mui/material";
+import {  Button, Link, TextField } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const LinkNav = styled(Link)(({ theme }) => ({
@@ -17,32 +17,66 @@ export const LinkNav = styled(Link)(({ theme }) => ({
   },
 }));
 
+export const ButtonForm = styled(Button)(({ theme }) => ({
+  marginTop: "10px",
+  backgroundColor: theme.palette.secondary.third,
+  border: "none",
+  padding: "1rem",
+  fontSize: "1rem",
+  width: "100%",
+  borderRadius: "1rem",
+  color: theme.palette.secondary.main,
+  boxShadow: `0 2px ${theme.palette.secondary.fourth}`,
+  cursor: "pointer",
+  "&:hover": {
+    background: theme.palette.primary.second,
+    color: theme.palette.secondary.main,
+  },
+  "&:active": {
+    color: "white",
+    boxShadow: "0 0.2rem #dfd9d9",
+    transform: "translateY(0.2rem)",
+  },
+}));
+
 export const CssTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
     "& input": {
-      color: theme.palette.secondary.fourth,
+      color: "black",
       cursor: "pointer",
     },
     "& fieldset": {
-      borderBottom: `2px solid ${theme.palette.secondary.fourth}`,
+      // borderBottom: `2px solid ${theme.palette.secondary.fourth}`,
       // borderRadius: "8px",
       padding: "18px 24px",
       fontWeight: "700",
       fontSize: "14px",
       lineHeight: "19px",
       letterSpacing: "-0.25px",
-      opacity: "0.4",
+      borderRadius: "20px",
+      border: "1.5px solid lightgrey",
+      // opacity: "0.4",
+      // boxShadow: `15px 0px 30px #bebebe,
+      // -15px 0px 30px #ffffff`,
+      transition: "all 0.5s",
+      boxShadow: "0px 0px 20px -18px",
       outline: "none",
-      backgroundColor: theme.palette.secondary.main
     },
     "&:hover fieldset": {
-      borderBottom: `2px solid ${theme.palette.primary.third}`,
+      // borderBottom: `2px solid black`,
       borderTop: "none",
       borderLeft: "none",
       borderRight: "none",
+      borderRadius: "0px",
+      borderBottom: "0px 0px 0px 2px solid lightgrey",
+      // boxShadow: "0px 0px 20px -17px",
     },
     "&.Mui-focused fieldset": {
-      borderBottom: `2px solid ${theme.palette.secondary.third}`,
+      borderTop: "none",
+      borderLeft: "none",
+      borderRight: "none",
+      borderRadius: "0px",
+      borderBottom: "0px 0px 0px 2px solid lightgrey",
     },
   },
 }));

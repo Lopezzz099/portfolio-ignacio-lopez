@@ -2,8 +2,8 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 
 import React from "react";
 import "./ContactosStyles.css";
-import { CssTextField } from "../../Custom/CustomComponents";
-
+import { ButtonForm, CssTextField } from "../../Custom/CustomComponents";
+import Img from "../../img/profile-pic.png";
 
 const Contactos = ({ isVisible, innerRef }) => {
   return (
@@ -46,120 +46,145 @@ const Contactos = ({ isVisible, innerRef }) => {
         >
           Contactos
         </Typography>
-        {/* <Typography>
-          Si tenes alguna duda o consulta, completa el formulario y me
-          comunicare con vos a la brevedad.
-        </Typography>
-        <Box>
-          <Box>
-
-            <Typography>Email</Typography>
-            <Typography>nacholopez1903@gmail.com</Typography>
-          </Box>
-          <Box>
-
-            <Typography>Telefono</Typography>
-            <Typography>+54 9 291 404-8598</Typography>
-          </Box>
-          <Box>
-
-            <Typography>Domicilio</Typography>
-            <Typography></Typography>
-          </Box>
-        </Box> */}
       </Box>
-      <Grid
-        container
-        spacing={2}
+      <Box
         sx={{
-          animationName: isVisible ? "entrada-de-texto-Contactos-Derecho" : "",
-          animationDuration: "1s",
-          animationDelay: ".3s",
-          animationFillMode: "forwards",
-          opacity: "0",
           width: "100%",
-          justifyContent: "flex-end",
+          display: "flex",
+          justifyContent: "space-between",
+          flexDirection: { xs: "row" },
         }}
-        component="form"
       >
-        <Grid item  xs={6}>
-          <Typography
-            sx={{
-              marginBottom: "9px",
-              fontFamily: "Manrope",
-              fontStyle: "normal",
-              fontWeight: "500",
-              fontSize: "16px",
-              lineHeight: "16px",
-              letterSpacing: "-0.214286px",
-              textAlign: "start",
-              marginTop: "10px",
-            }}
-          >
-            Email
-          </Typography>
-          <CssTextField
-            name="email"
-            sx={{
-              width: "100%",
-            }}
+        {/* <Box
+          sx={{
+            width: "35%",
+          }}
+        >
+          <img
+            src={`${Img}`}
+            alt={Img}
+            loading="lazy"
+            style={{ width: "100%", borderRadius: "100%" }}
           />
+        </Box> */}
+        <Grid
+          container
+          spacing={0}
+          sx={{
+            animationName: isVisible
+              ? "entrada-de-texto-Contactos-Derecho"
+              : "",
+            animationDuration: "1s",
+            animationDelay: ".3s",
+            animationFillMode: "forwards",
+            opacity: "0",
+            width: "100%",
+            boxShadow: `15px 15px 30px #bebebe,
+            -15px -15px 30px #ffffff`,
+            borderRadius: "30px",
+            backgroundColor: "secondary.main",
+            justifyContent: "space-between",
+            padding: "20px",
+          }}
+          component="form"
+        >
+          <Grid item xs={6} sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}>
+            <Box
+              sx={{
+                width: "80%",
+              }}
+            >
+              <img
+                src={`${Img}`}
+                alt={Img}
+                loading="lazy"
+                style={{ width: "100%", borderRadius: "100%" }}
+              />
+            </Box>
+          </Grid>
+          <Grid item container xs={6}>
+            <Grid item xs={12}>
+              <Typography
+                sx={{
+                  marginBottom: "9px",
+                  fontFamily: "Manrope",
+                  fontStyle: "normal",
+                  fontWeight: "500",
+                  fontSize: "16px",
+                  lineHeight: "16px",
+                  letterSpacing: "-0.214286px",
+                  textAlign: "start",
+                  marginTop: "10px",
+                }}
+              >
+                Email
+              </Typography>
+              <CssTextField
+                name="email"
+                sx={{
+                  width: "100%",
+                }}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <Typography
+                sx={{
+                  marginBottom: "9px",
+                  fontFamily: "Manrope",
+                  fontStyle: "normal",
+                  fontWeight: "500",
+                  fontSize: "16px",
+                  lineHeight: "16px",
+                  letterSpacing: "-0.214286px",
+                  textAlign: "start",
+                  marginTop: "10px",
+                }}
+              >
+                Asunto
+              </Typography>
+              <CssTextField
+                name="asunto"
+                sx={{
+                  width: "100%",
+                }}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <Typography
+                sx={{
+                  marginBottom: "9px",
+                  fontFamily: "Manrope",
+                  fontStyle: "normal",
+                  fontWeight: "500",
+                  fontSize: "16px",
+                  lineHeight: "16px",
+                  letterSpacing: "-0.214286px",
+                  textAlign: "start",
+                  marginTop: "10px",
+                }}
+              >
+                Mensaje
+              </Typography>
+              <CssTextField
+                name="mensaje"
+                multiline
+                rows={8}
+                maxRows={8}
+                sx={{
+                  width: "100%",
+                }}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <ButtonForm>Enviar</ButtonForm>
+            </Grid>
+          </Grid>
         </Grid>
-        <Grid item xs={6}>
-          <Typography
-            sx={{
-              marginBottom: "9px",
-              fontFamily: "Manrope",
-              fontStyle: "normal",
-              fontWeight: "500",
-              fontSize: "16px",
-              lineHeight: "16px",
-              letterSpacing: "-0.214286px",
-              textAlign: "start",
-              marginTop: "10px",
-            }}
-          >
-            Asunto
-          </Typography>
-          <CssTextField
-            name="email"
-            sx={{
-              width: "100%",
-            }}
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <Typography
-            sx={{
-              marginBottom: "9px",
-              fontFamily: "Manrope",
-              fontStyle: "normal",
-              fontWeight: "500",
-              fontSize: "16px",
-              lineHeight: "16px",
-              letterSpacing: "-0.214286px",
-              textAlign: "start",
-              marginTop: "10px",
-            }}
-          >
-            Mensaje
-          </Typography>
-          <CssTextField
-            name="email"
-            multiline
-            rows={8}
-            maxRows={8}
-            sx={{
-              width: "100%",
-            }}
-          />
-        </Grid>
-        <Grid item xs={4}>
-            <Button>
-              Enviar
-            </Button>
-        </Grid>
-      </Grid>
+      </Box>
     </Box>
   );
 };
